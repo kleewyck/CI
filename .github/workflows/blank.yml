@@ -38,4 +38,10 @@ jobs:
        # Print environment    
       - name: Printe env
         run: env
+
+      # Print Github Context
+      - name: Print Context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
         
